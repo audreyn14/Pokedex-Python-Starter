@@ -10,20 +10,33 @@ def pokedex(pokemon_list):
 
 # Add a language choice feature and print the pokemons name based on the user input
 #revisit
-    lang=input("What language would you like? English, Japanese, Chinese, or French: ")
+    lang=input("What language would you like? 1 for English, 2 for Japanese, 3 for Chinese, or 4 for French: ")
     for pokemon in data:
-        if lang=="English":
+        if lang=="1":
             print(pokemon["name"]["english"])
-    pokedex()
+        elif lang=="2":
+            print(pokemon["name"]["japanese"])
+        elif lang=="3":
+            print(pokemon["name"]["chinese"])
+        elif lang=="4":
+            print(pokemon["name"]["french"])
+        else:
+            print("Invalid input")
+            break
+#pokedex(data)
 
 # Develop a function that creates a new list of pokemon based on the type the user searched for. If no pokemon was found of that type inform the user
-def pokemon_type():
-
+def pokemon_type(pokemon_list):
     pokemon_history=[]
     while True:
         x=input("What type pokemon do you want?")
-        pokemon_history.append
-
+        for pokemon in data:
+            if x != (pokemon["type"]):
+                print("No pokemon found of that type.")
+            else:
+                pokemon_history.append
+pokemon_type(data)
+ 
 #Develop a function to find all pokemon matching the name the user searched for. Ex. if "Char" return Charmander, Charmeleon and Charizard. Make the user aware if no pokemon was found. 
 
 
