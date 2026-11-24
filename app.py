@@ -36,12 +36,13 @@ def pokemon_type(pokemon_list):
         else:
             print("No pokemon of that type.")
             break
-pokemon_type(data)
+#pokemon_type(data)
 
 #test
 """ for pokemon in data:
     print(pokemon["type"]) """
 
+print(["type"])
 
 #Develop a function to find all pokemon matching the name the user searched for. Ex. if "Char" return Charmander, Charmeleon and Charizard. Make the user aware if no pokemon was found. 
 
