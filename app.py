@@ -26,19 +26,22 @@ def pokedex(pokemon_list):
 #pokedex(data)
 
 # Develop a function that creates a new list of pokemon based on the type the user searched for. If no pokemon was found of that type inform the user
-def pokemon_type(types_list):
+def pokemon_type(pokemon_list):
     pokemon_history=[]
     for pokemon in data:
         x=input("What type?")          
-        if x in pokemon["type"]:
-            pokemon_history.append(pokemon["name"])
+        if x == pokemon["type"]:
+            pokemon_history.append(pokemon["name"]["english"])
+            print(pokemon_history)
         else:
             print("No pokemon of that type.")
             break
+pokemon_type(data)
 
+#test
+""" for pokemon in data:
+    print(pokemon["type"]) """
 
-for pokemon in data:
-    print(pokemon["type"]["English"])
 
 #Develop a function to find all pokemon matching the name the user searched for. Ex. if "Char" return Charmander, Charmeleon and Charizard. Make the user aware if no pokemon was found. 
 
